@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'montserrat';
+  src: url('./fonts/Montserrat-Medium.ttf');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: montserrat;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#form {
+  width: 30%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px;
+}
+
+#form div {
+  display: flex;
+  flex-direction: column;
+}
+
+#form label {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#form input {
+  padding: 5px;
+  border-radius: 8px;
+  border: 2px solid red;
+
+}
+
+#form input:focus {
+  outline: none;
+  border: 2px solid blue !important;
+}
+
+#form div .error-msg {
+  color: red;
+}
+
+#form .signup-btn {
+  align-self: center;
+  padding: 5px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 255, 0.671);
+  border: none;
   color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 0.9rem;
+
+  transition: transform 0.2s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#form .signup-btn:hover {
+  transform: scale(1.1);
 }
